@@ -1,0 +1,14 @@
+quarkus:
+  flyway:
+    migrate-at-start: true
+    clean-at-start: true
+  datasource:
+    jdbc:
+      url: jdbc:h2:mem:default
+    db-kind: h2
+    username: username-default
+  hibernate-orm:
+    dialect: org.hibernate.dialect.H2Dialect
+    database:
+      generation: none
+    sql-load-script: no-file
