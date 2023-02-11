@@ -19,6 +19,11 @@ dependencies {
     implementation("io.quarkus:quarkus-micrometer-registry-prometheus")
     implementation("io.quarkus:quarkus-jdbc-h2")
     implementation("io.quarkus:quarkus-hibernate-orm-panache")
+    implementation("io.quarkus:quarkus-mongodb-panache")
+    implementation("io.quarkus:quarkus-spring-di")
+    implementation("io.quarkus:quarkus-oidc")
+    implementation("io.quarkus:quarkus-keycloak-authorization")
+    implementation("io.quarkus:quarkus-elytron-security-oauth2")
     implementation("io.quarkus:quarkus-flyway")
     implementation 'org.apache.commons:commons-lang3:3.12.0'
     implementation("io.quarkus:quarkus-config-yaml")

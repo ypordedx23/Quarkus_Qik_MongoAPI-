@@ -18,7 +18,7 @@ import java.util.UUID;
 
 @RouteBase(path = "quarkTest")
 public class Main {
-
+/*
     @Inject
     UserRepository usRepository;
 
@@ -44,5 +44,5 @@ public class Main {
             us.setPassword(RandomStringUtils.randomAlphanumeric(10));
             usRepository.persistAndFlush(us);
         }
-    }
+    }*/
 }

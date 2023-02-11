@@ -1,14 +1,19 @@
 quarkus:
-  flyway:
-    migrate-at-start: true
-    clean-at-start: true
-  datasource:
-    jdbc:
-      url: jdbc:h2:mem:default
-    db-kind: h2
-    username: username-default
-  hibernate-orm:
-    dialect: org.hibernate.dialect.H2Dialect
-    database:
-      generation: none
-    sql-load-script: no-file
+  mongodb:
+    connection-string: mongodb://127.0.0.1:27017
+    database: qik_db
+  oidc:
+    client-id: backend-service
+    tls:
+      verification: none
+    credentials:
+      secret: secret
+  keycloak:
+    devservices:
+      realm-path: quarkus-realm.json
+    policy-enforcer:
+      enable: 'true'
+  oauth2:
+    client-id: client_id
+    client-secret: secret
+    introspection-url: http://oauth-server/introspect
