@@ -8,8 +8,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FeedbackRequest {
-    private Integer rating;
+    private Float rating;
     private String description;
     private String storeId;
     private String ratingDescription;
+    private String userId;
 }

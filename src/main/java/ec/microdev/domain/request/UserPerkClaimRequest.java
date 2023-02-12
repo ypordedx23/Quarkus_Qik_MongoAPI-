@@ -7,8 +7,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class SubscriptionRequest {
-    private String userId;
-    private String storeId;
-
+public class UserPerkClaimRequest {
+    private String userUUID;
+    private String perkUUID;
 }

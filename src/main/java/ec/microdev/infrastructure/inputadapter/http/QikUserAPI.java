@@ -11,26 +11,28 @@ import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import javax.inject.Inject;
 import java.util.List;
 
-@RouteBase(path = "qikAPI")
+@RouteBase(path = "qikAPI/user")
 public class QikUserAPI {
     @Inject
     QikUserInputPort userInputPort;
 
-    @Route(path = "user", methods = Route.HttpMethod.POST)
+    @Route(path = "register", methods = Route.HttpMethod.POST)
     QikUser createUser(@Body QikUser qikUser){
-        /*userInputPort.createUser(ex.getParam("username").get(),ex.getParam("password").get(),
-                ex.getParam("cellphone").get(),ex.getParam("email").get(),
-                ex.getParam("birthDate").get());*/
         return userInputPort.createUser(qikUser);
     }
 
-    @Timed
-    @Counted
-    @Route(path="users", methods = Route.HttpMethod.GET, produces = ReactiveRoutes.JSON_STREAM)
-    @CacheName("users")
+    @Route(path="", methods = Route.HttpMethod.GET, produces = ReactiveRoutes.JSON_STREAM)
     List<QikUser> getUser(){
         return userInputPort.getAll();
     }
 
+    @Route(path = ":userUUID",methods = Route.HttpMethod.GET, produces = ReactiveRoutes.JSON_STREAM)
+    QikUser getUserByUUID(@Param String userUUID){
+        return userInputPort.getById(userUUID);
+    }
 
+    @Route(path = "update", methods = Route.HttpMethod.PUT, produces = ReactiveRoutes.JSON_STREAM)
+    QikUser updateUserInfo(@Body QikUser qikUser){
+        return userInputPort.updateUser(qikUser);
+    }
 }

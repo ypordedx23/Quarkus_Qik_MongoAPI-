@@ -14,4 +14,10 @@ public class Constant {
     public static final String STATUS_ACTIVE ="ACTIVE";
     public static final String STATUS_INACTIVE ="INACTIVE";
     public static final String STATUS_OPERATIONAL="OPERATIONAL";
+    public static final Integer PERK_CLAIMED_STATUS=1;
+    public static final Integer PERK_CLAIMED_STATUS_RECLAIMED=2;
+    public static final Integer PERK_CLAIMED_STATUS_LAPSED=3;
+    public static final String ROLE_ADMIN ="ADMIN";
+    public static final String ROLE_CUSTOMER ="CUSTOMER";
+    public static final String ROLE_STORE ="STORE";
 }

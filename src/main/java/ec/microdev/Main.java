@@ -1,20 +1,6 @@
 package ec.microdev;
 
-import ec.microdev.entity.User;
-import ec.microdev.entity.UserRepository;
-import io.micrometer.core.annotation.Counted;
-import io.micrometer.core.annotation.Timed;
-import io.quarkus.cache.CacheName;
-import io.quarkus.runtime.StartupEvent;
-import io.quarkus.vertx.web.*;
-import io.smallrye.mutiny.Multi;
-import io.smallrye.mutiny.infrastructure.Infrastructure;
-import org.apache.commons.lang3.RandomStringUtils;
-
-import javax.enterprise.event.Observes;
-import javax.inject.Inject;
-import javax.transaction.Transactional;
-import java.util.UUID;
+import io.quarkus.vertx.web.RouteBase;
 
 @RouteBase(path = "quarkTest")
 public class Main {

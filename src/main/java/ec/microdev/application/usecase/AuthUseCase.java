@@ -1,28 +1,63 @@
 package ec.microdev.application.usecase;
 
+import ec.microdev.domain.documents.QikStore;
 import ec.microdev.domain.documents.QikUser;
 import ec.microdev.domain.request.LoginRequest;
+import ec.microdev.domain.request.StoreRegisterRequest;
+import ec.microdev.domain.request.UserRegisterRequest;
+import ec.microdev.domain.response.AuthResponse;
 import ec.microdev.infrastructure.inputport.AuthInputPort;
+import ec.microdev.infrastructure.outputadapter.QIkStoreAdapter;
 import ec.microdev.infrastructure.outputadapter.QikUserAdapter;
+import ec.microdev.utils.Constant;
+import ec.microdev.utils.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
 public class AuthUseCase implements AuthInputPort {
 
     @Autowired
     QikUserAdapter qikUserAdapter;
 
+    @Autowired
+    QIkStoreAdapter qIkStoreAdapter;
+
     @Override
-    public QikUser registerQikuser(QikUser qikUser) {
-        return null;
+    public AuthResponse signinQikUser(UserRegisterRequest qikUserRegistration) {
+        QikUser qikUser = Mapper.mapToQikUser(qikUserRegistration);
+        List<String> roles = new ArrayList<>();
+        roles.add(Constant.ROLE_CUSTOMER);
+        qikUser.setRole(roles);
+        qikUserAdapter.persist(qikUser);
+        AuthResponse authResponse = Mapper.mapToAuthResponse(qikUser,"MockToken-IGNORE");
+        return authResponse;
     }
 
     @Override
-    public QikUser loginQikUser(LoginRequest loginRequest) {
-        QikUser dbQuikuser = qikUserAdapter.findByUserName(loginRequest.getUsername()).get();
-        if(dbQuikuser.getPassword().equals(loginRequest.getPassword())){
-            return dbQuikuser;
-        }else {
-            return new QikUser();
+    public AuthResponse loginQikUser(LoginRequest loginRequest) {
+        AuthResponse response = new AuthResponse();
+        QikUser dbQikUser = qikUserAdapter.findByEmail(loginRequest.getUsername()).get();
+        if(dbQikUser.getPassword().equals(loginRequest.getPassword())){
+            response = Mapper.mapToAuthResponse(dbQikUser, "MockToken-IGNORE");
         }
+        return response;
+    }
+
+    @Override
+    public AuthResponse signinQikStore(StoreRegisterRequest storeRegisterRequest) {
+        QikUser qikUser = Mapper.mapToQikUser(storeRegisterRequest);
+        QikStore qikStore = Mapper.mapToQikStore(storeRegisterRequest);
+        List<String> roles = new ArrayList<>();
+        roles.add(Constant.ROLE_STORE);
+        qikUser.setRole(roles);
+        qikUserAdapter.persist(qikUser);
+        qikStore.setOwnerUUID(qikUser.get_id().toString());
+        qIkStoreAdapter.persist(qikStore);
+        AuthResponse response = Mapper.mapToAuthResponse(qikUser,"MockToken-IGNORE");
+        return response;
     }
 }

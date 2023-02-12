@@ -1,11 +1,14 @@
 package ec.microdev.infrastructure.inputport;
 
-import ec.microdev.domain.documents.QikUser;
 import ec.microdev.domain.request.LoginRequest;
-import io.quarkus.vertx.web.Body;
+import ec.microdev.domain.request.StoreRegisterRequest;
+import ec.microdev.domain.request.UserRegisterRequest;
+import ec.microdev.domain.response.AuthResponse;
 
 public interface AuthInputPort {
-    QikUser registerQikuser(QikUser qikUser);
+    AuthResponse signinQikUser(UserRegisterRequest qikUserRegistration);
 
-    QikUser loginQikUser(LoginRequest loginRequest);
+    AuthResponse loginQikUser(LoginRequest loginRequest);
+
+    AuthResponse signinQikStore(StoreRegisterRequest storeRegisterRequest);
 }

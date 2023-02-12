@@ -4,20 +4,18 @@ import io.quarkus.mongodb.panache.common.MongoEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.bson.types.ObjectId;
 
 import javax.persistence.Id;
 
 @NoArgsConstructor
 @Getter
 @Setter
-@MongoEntity(collection="QikUserFeedBack")
-public class QikUserFeedback {
+@MongoEntity(collection="QikUserClaimPerk")
+public class QikUserPerkClaim {
     @Id
-    private ObjectId _id;
-    private Float rating;
-    private String description;
+    private Object _id;
     private String userId;
-    private String storeId;
-    private String ratingDescription;
+    private String perkId;
+    private String claimedDate;
+    private Integer status;
 }

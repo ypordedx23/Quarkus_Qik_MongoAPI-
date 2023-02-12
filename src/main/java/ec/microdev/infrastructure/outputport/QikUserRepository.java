@@ -10,4 +10,7 @@ public interface QikUserRepository extends PanacheMongoRepository<QikUser> {
     Optional<QikUser> findByUserName(String username);
     boolean existByUsername(String username);
 
+    Optional<QikUser> findByUserUUID(String userID);
+
+    Optional<QikUser> findByEmail(String userEmail);
 }
