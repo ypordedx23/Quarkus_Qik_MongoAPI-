@@ -2,11 +2,7 @@ package ec.microdev.infrastructure.inputadapter.http;
 
 import ec.microdev.domain.documents.QikUser;
 import ec.microdev.infrastructure.inputport.QikUserInputPort;
-import io.micrometer.core.annotation.Counted;
-import io.micrometer.core.annotation.Timed;
-import io.quarkus.cache.CacheName;
 import io.quarkus.vertx.web.*;
-import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 import javax.inject.Inject;
 import java.util.List;

@@ -1,7 +1,6 @@
 package ec.microdev.infrastructure.outputport;
 
 import ec.microdev.domain.documents.QikPerk;
-import ec.microdev.domain.documents.QikUser;
 import io.quarkus.mongodb.panache.PanacheMongoRepository;
 
 import java.util.List;

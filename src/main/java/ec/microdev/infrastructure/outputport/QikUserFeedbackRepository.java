@@ -1,6 +1,5 @@
 package ec.microdev.infrastructure.outputport;
 
-import ec.microdev.domain.documents.QikUser;
 import ec.microdev.domain.documents.QikUserFeedback;
 import io.quarkus.mongodb.panache.PanacheMongoRepository;
 

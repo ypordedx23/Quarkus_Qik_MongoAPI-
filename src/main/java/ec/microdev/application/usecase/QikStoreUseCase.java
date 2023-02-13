@@ -6,13 +6,13 @@ import ec.microdev.infrastructure.inputport.QikStoreInputPort;
 import ec.microdev.infrastructure.outputadapter.QIkStoreAdapter;
 import ec.microdev.utils.Constant;
 import ec.microdev.utils.Mapper;
-import org.springframework.stereotype.Component;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@ApplicationScoped
 public class QikStoreUseCase implements QikStoreInputPort {
 
     @Inject

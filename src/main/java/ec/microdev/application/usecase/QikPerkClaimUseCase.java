@@ -9,8 +9,8 @@ import ec.microdev.infrastructure.outputadapter.QikUserPerkClaimAdapter;
 import ec.microdev.utils.Constant;
 import ec.microdev.utils.Mapper;
 import ec.microdev.utils.Util;
-import org.springframework.stereotype.Component;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@ApplicationScoped
 public class QikPerkClaimUseCase implements QikUserPerkClaimInputPort {
 
     @Inject

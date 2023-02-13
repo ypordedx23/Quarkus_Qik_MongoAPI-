@@ -4,14 +4,14 @@ import ec.microdev.domain.documents.QikPerk;
 import ec.microdev.infrastructure.inputport.QikPerkInputPort;
 import ec.microdev.infrastructure.outputadapter.QikPerkAdapter;
 import org.bson.types.ObjectId;
-import org.springframework.stereotype.Component;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@ApplicationScoped
 public class QikPerkUseCase implements QikPerkInputPort {
 
     @Inject

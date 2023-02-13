@@ -4,14 +4,15 @@ import ec.microdev.domain.documents.QikUser;
 import ec.microdev.infrastructure.inputport.QikUserInputPort;
 import ec.microdev.infrastructure.outputadapter.QikUserAdapter;
 import org.bson.types.ObjectId;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import java.util.List;
 
-@Component
+@ApplicationScoped
 public class QikUserUseCase implements QikUserInputPort {
 
-    @Autowired
+    @Inject
     QikUserAdapter qikUserAdapter;
 
     @Override

@@ -1,7 +1,6 @@
 package ec.microdev.domain.documents;
 
 import io.quarkus.mongodb.panache.common.MongoEntity;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

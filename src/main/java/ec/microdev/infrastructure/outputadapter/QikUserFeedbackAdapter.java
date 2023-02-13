@@ -3,9 +3,11 @@ package ec.microdev.infrastructure.outputadapter;
 import ec.microdev.domain.documents.QikUserFeedback;
 import ec.microdev.infrastructure.outputport.QikUserFeedbackRepository;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.List;
 import java.util.Optional;
 
+@ApplicationScoped
 public class QikUserFeedbackAdapter implements QikUserFeedbackRepository {
     @Override
     public Optional<List<QikUserFeedback>> getAllUserFeedbackByStoreUUID(String storeUUID) {

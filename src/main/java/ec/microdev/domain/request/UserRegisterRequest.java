@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 public class UserRegisterRequest {
     String name;
-    String LastName;
+    String lastName;
     String phoneNumber;
     String email;
     String birthDate;

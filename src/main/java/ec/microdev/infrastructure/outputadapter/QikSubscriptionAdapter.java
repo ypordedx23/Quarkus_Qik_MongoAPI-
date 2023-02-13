@@ -1,11 +1,9 @@
 package ec.microdev.infrastructure.outputadapter;
 
-import com.mongodb.client.model.Filters;
 import ec.microdev.domain.documents.QikSubscription;
-import ec.microdev.domain.documents.QikUserPerkClaim;
 import ec.microdev.infrastructure.outputport.QikSubscriptionRepository;
-import org.bson.types.ObjectId;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +12,7 @@ import java.util.stream.Collectors;
 
 import static ec.microdev.utils.Util.addIfNotNull;
 
+@ApplicationScoped
 public class QikSubscriptionAdapter implements QikSubscriptionRepository {
     @Override
     public Optional<QikSubscription> findByUserUUID(String userID) {

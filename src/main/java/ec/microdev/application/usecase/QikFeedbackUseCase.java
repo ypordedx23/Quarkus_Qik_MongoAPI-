@@ -5,14 +5,15 @@ import ec.microdev.domain.request.FeedbackRequest;
 import ec.microdev.infrastructure.inputport.QikUserFeedbackInputPort;
 import ec.microdev.infrastructure.outputadapter.QikUserFeedbackAdapter;
 import org.bson.types.ObjectId;
-import org.springframework.stereotype.Component;
 import ec.microdev.utils.Mapper;
+
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@ApplicationScoped
 public class QikFeedbackUseCase implements QikUserFeedbackInputPort {
 
     @Inject

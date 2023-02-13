@@ -1,10 +1,7 @@
 package ec.microdev.infrastructure.inputport;
 
 import ec.microdev.domain.documents.QikUserFeedback;
-import ec.microdev.domain.documents.QikUserPerkClaim;
 import ec.microdev.domain.request.FeedbackRequest;
-import ec.microdev.domain.request.UserPerkClaimRequest;
-import ec.microdev.domain.response.UserPerkClaimResponse;
 
 import java.util.List;
 

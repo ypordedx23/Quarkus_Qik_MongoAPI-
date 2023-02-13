@@ -11,19 +11,19 @@ import ec.microdev.infrastructure.outputadapter.QIkStoreAdapter;
 import ec.microdev.infrastructure.outputadapter.QikUserAdapter;
 import ec.microdev.utils.Constant;
 import ec.microdev.utils.Mapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@ApplicationScoped
 public class AuthUseCase implements AuthInputPort {
 
-    @Autowired
+    @Inject
     QikUserAdapter qikUserAdapter;
 
-    @Autowired
+    @Inject
     QIkStoreAdapter qIkStoreAdapter;
 
     @Override

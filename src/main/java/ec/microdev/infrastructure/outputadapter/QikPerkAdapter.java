@@ -1,13 +1,14 @@
 package ec.microdev.infrastructure.outputadapter;
 
 import ec.microdev.domain.documents.QikPerk;
-import ec.microdev.domain.documents.QikUser;
 import ec.microdev.infrastructure.outputport.QikPerkRepository;
 import org.bson.types.ObjectId;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.List;
 import java.util.Optional;
 
+@ApplicationScoped
 public class QikPerkAdapter implements QikPerkRepository {
     @Override
     public Optional<QikPerk> findByUserUUID(String userID) {
