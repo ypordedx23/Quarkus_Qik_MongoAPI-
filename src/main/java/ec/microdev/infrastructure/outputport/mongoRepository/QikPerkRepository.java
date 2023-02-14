@@ -1,4 +1,4 @@
-package ec.microdev.infrastructure.outputport;
+package ec.microdev.infrastructure.outputport.mongoRepository;
 
 import ec.microdev.domain.documents.QikPerk;
 import io.quarkus.mongodb.panache.PanacheMongoRepository;

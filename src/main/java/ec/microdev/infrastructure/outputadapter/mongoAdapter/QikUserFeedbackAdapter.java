@@ -1,7 +1,7 @@
-package ec.microdev.infrastructure.outputadapter;
+package ec.microdev.infrastructure.outputadapter.mongoAdapter;
 
 import ec.microdev.domain.documents.QikUserFeedback;
-import ec.microdev.infrastructure.outputport.QikUserFeedbackRepository;
+import ec.microdev.infrastructure.outputport.mongoRepository.QikUserFeedbackRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.util.List;

@@ -2,7 +2,7 @@ package ec.microdev.infrastructure.inputadapter.http;
 
 import ec.microdev.domain.documents.QikStore;
 import ec.microdev.domain.request.StoreRegisterRequest;
-import ec.microdev.infrastructure.inputport.QikStoreInputPort;
+import ec.microdev.infrastructure.inputport.http.QikStoreInputPort;
 import ec.microdev.utils.Constant;
 import io.quarkus.vertx.web.*;
 

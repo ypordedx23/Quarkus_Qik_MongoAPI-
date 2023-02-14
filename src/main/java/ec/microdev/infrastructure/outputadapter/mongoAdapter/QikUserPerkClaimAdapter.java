@@ -1,7 +1,7 @@
-package ec.microdev.infrastructure.outputadapter;
+package ec.microdev.infrastructure.outputadapter.mongoAdapter;
 
 import ec.microdev.domain.documents.QikUserPerkClaim;
-import ec.microdev.infrastructure.outputport.QikUserPerkClaimRepository;
+import ec.microdev.infrastructure.outputport.mongoRepository.QikUserPerkClaimRepository;
 import org.bson.types.ObjectId;
 
 import javax.enterprise.context.ApplicationScoped;

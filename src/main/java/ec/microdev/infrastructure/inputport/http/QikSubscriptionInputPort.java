@@ -1,4 +1,4 @@
-package ec.microdev.infrastructure.inputport;
+package ec.microdev.infrastructure.inputport.http;
 
 import ec.microdev.domain.documents.QikSubscription;
 import ec.microdev.domain.request.SubscriptionRequest;

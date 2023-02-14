@@ -1,8 +1,8 @@
 package ec.microdev.application.usecase;
 
 import ec.microdev.domain.documents.QikUser;
-import ec.microdev.infrastructure.inputport.QikUserInputPort;
-import ec.microdev.infrastructure.outputadapter.QikUserAdapter;
+import ec.microdev.infrastructure.inputport.http.QikUserInputPort;
+import ec.microdev.infrastructure.outputadapter.mongoAdapter.QikUserAdapter;
 import org.bson.types.ObjectId;
 
 import javax.enterprise.context.ApplicationScoped;

@@ -6,9 +6,9 @@ import ec.microdev.domain.request.LoginRequest;
 import ec.microdev.domain.request.StoreRegisterRequest;
 import ec.microdev.domain.request.UserRegisterRequest;
 import ec.microdev.domain.response.AuthResponse;
-import ec.microdev.infrastructure.inputport.AuthInputPort;
-import ec.microdev.infrastructure.outputadapter.QIkStoreAdapter;
-import ec.microdev.infrastructure.outputadapter.QikUserAdapter;
+import ec.microdev.infrastructure.inputport.http.AuthInputPort;
+import ec.microdev.infrastructure.outputadapter.mongoAdapter.QIkStoreAdapter;
+import ec.microdev.infrastructure.outputadapter.mongoAdapter.QikUserAdapter;
 import ec.microdev.utils.Constant;
 import ec.microdev.utils.Mapper;
 

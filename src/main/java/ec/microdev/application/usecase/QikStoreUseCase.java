@@ -2,8 +2,8 @@ package ec.microdev.application.usecase;
 
 import ec.microdev.domain.documents.QikStore;
 import ec.microdev.domain.request.StoreRegisterRequest;
-import ec.microdev.infrastructure.inputport.QikStoreInputPort;
-import ec.microdev.infrastructure.outputadapter.QIkStoreAdapter;
+import ec.microdev.infrastructure.inputport.http.QikStoreInputPort;
+import ec.microdev.infrastructure.outputadapter.mongoAdapter.QIkStoreAdapter;
 import ec.microdev.utils.Constant;
 import ec.microdev.utils.Mapper;
 

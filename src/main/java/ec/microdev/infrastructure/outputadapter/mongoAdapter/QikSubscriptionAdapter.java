@@ -1,7 +1,7 @@
-package ec.microdev.infrastructure.outputadapter;
+package ec.microdev.infrastructure.outputadapter.mongoAdapter;
 
 import ec.microdev.domain.documents.QikSubscription;
-import ec.microdev.infrastructure.outputport.QikSubscriptionRepository;
+import ec.microdev.infrastructure.outputport.mongoRepository.QikSubscriptionRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.util.HashMap;

@@ -3,7 +3,7 @@ package ec.microdev.infrastructure.inputadapter.http;
 import ec.microdev.domain.documents.QikSubscription;
 import ec.microdev.domain.request.SubscriptionRequest;
 import ec.microdev.domain.response.SubscriptionResponse;
-import ec.microdev.infrastructure.inputport.QikSubscriptionInputPort;
+import ec.microdev.infrastructure.inputport.http.QikSubscriptionInputPort;
 import ec.microdev.utils.Constant;
 import io.quarkus.vertx.web.*;
 

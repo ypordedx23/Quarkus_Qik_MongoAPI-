@@ -2,8 +2,8 @@ package ec.microdev.application.usecase;
 
 import ec.microdev.domain.documents.QikUserFeedback;
 import ec.microdev.domain.request.FeedbackRequest;
-import ec.microdev.infrastructure.inputport.QikUserFeedbackInputPort;
-import ec.microdev.infrastructure.outputadapter.QikUserFeedbackAdapter;
+import ec.microdev.infrastructure.inputport.http.QikUserFeedbackInputPort;
+import ec.microdev.infrastructure.outputadapter.mongoAdapter.QikUserFeedbackAdapter;
 import org.bson.types.ObjectId;
 import ec.microdev.utils.Mapper;
 

@@ -1,7 +1,7 @@
-package ec.microdev.infrastructure.outputadapter;
+package ec.microdev.infrastructure.outputadapter.mongoAdapter;
 
 import ec.microdev.domain.documents.QikUser;
-import ec.microdev.infrastructure.outputport.QikUserRepository;
+import ec.microdev.infrastructure.outputport.mongoRepository.QikUserRepository;
 import org.bson.types.ObjectId;
 
 import javax.enterprise.context.ApplicationScoped;

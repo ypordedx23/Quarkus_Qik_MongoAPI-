@@ -3,7 +3,7 @@ package ec.microdev.infrastructure.inputadapter.http;
 import ec.microdev.domain.documents.QikUserPerkClaim;
 import ec.microdev.domain.request.UserPerkClaimRequest;
 import ec.microdev.domain.response.UserPerkClaimResponse;
-import ec.microdev.infrastructure.inputport.QikUserPerkClaimInputPort;
+import ec.microdev.infrastructure.inputport.http.QikUserPerkClaimInputPort;
 import io.quarkus.vertx.web.*;
 
 import javax.inject.Inject;

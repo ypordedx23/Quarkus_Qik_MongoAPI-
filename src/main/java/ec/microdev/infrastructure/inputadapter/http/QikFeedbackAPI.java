@@ -2,7 +2,7 @@ package ec.microdev.infrastructure.inputadapter.http;
 
 import ec.microdev.domain.documents.QikUserFeedback;
 import ec.microdev.domain.request.FeedbackRequest;
-import ec.microdev.infrastructure.inputport.QikUserFeedbackInputPort;
+import ec.microdev.infrastructure.inputport.http.QikUserFeedbackInputPort;
 import io.quarkus.vertx.web.*;
 
 import javax.inject.Inject;

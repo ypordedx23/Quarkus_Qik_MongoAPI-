@@ -1,7 +1,7 @@
 package ec.microdev.infrastructure.inputadapter.http;
 
 import ec.microdev.domain.documents.QikUser;
-import ec.microdev.infrastructure.inputport.QikUserInputPort;
+import ec.microdev.infrastructure.inputport.http.QikUserInputPort;
 import io.quarkus.vertx.web.*;
 
 import javax.inject.Inject;

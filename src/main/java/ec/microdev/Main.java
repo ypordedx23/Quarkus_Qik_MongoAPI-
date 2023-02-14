@@ -1,9 +1,8 @@
 package ec.microdev;
 
-import io.quarkus.vertx.web.RouteBase;
 
-@RouteBase(path = "quarkTest")
 public class Main {
+
 /*
     @Inject
     UserRepository usRepository;

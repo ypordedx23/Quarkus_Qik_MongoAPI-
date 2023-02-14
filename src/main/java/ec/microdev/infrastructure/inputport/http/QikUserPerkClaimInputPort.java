@@ -1,4 +1,4 @@
-package ec.microdev.infrastructure.inputport;
+package ec.microdev.infrastructure.inputport.http;
 
 import ec.microdev.domain.documents.QikUserPerkClaim;
 import ec.microdev.domain.request.UserPerkClaimRequest;

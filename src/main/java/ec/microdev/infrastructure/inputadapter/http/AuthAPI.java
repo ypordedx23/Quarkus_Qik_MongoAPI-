@@ -4,15 +4,15 @@ import ec.microdev.domain.request.LoginRequest;
 import ec.microdev.domain.request.StoreRegisterRequest;
 import ec.microdev.domain.request.UserRegisterRequest;
 import ec.microdev.domain.response.AuthResponse;
-import ec.microdev.infrastructure.inputport.AuthInputPort;
+import ec.microdev.infrastructure.inputport.http.AuthInputPort;
 import io.quarkus.vertx.web.Body;
 import io.quarkus.vertx.web.ReactiveRoutes;
 import io.quarkus.vertx.web.Route;
-import io.quarkus.vertx.web.RouteBase;
 
 import javax.inject.Inject;
+import javax.ws.rs.Path;
 
-@RouteBase(path = "qikAPI/auth")
+@Path("/auth")
 public class AuthAPI {
 
 
