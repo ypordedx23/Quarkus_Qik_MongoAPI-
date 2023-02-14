@@ -1,4 +1,21 @@
 quarkus:
   mongodb:
-    connection-string: mongodb://127.0.0.1:27017
+    connection-string: mongodb://192.168.1.13:27017
     database: qik_db
+  oidc:
+    auth-server-url:  ${KEYCLOAK_URL:http://localhost:8090/realms/quarkus}
+    client-id: backend-service
+    credentials:
+      secret: secret
+  log:
+    min-level: DEBUG
+    category:
+      "io.quarkus.oidc":
+        level: DEBUG
+
+  rest-client:
+    keycloak:
+      url: ${KEYCLOAK_URL:http://localhost:8090/realms/quarkus}
+app:
+  name: ${MS_NAME:Qik-MongoApi}
+  description: ${app.name} is a Quarkus application
