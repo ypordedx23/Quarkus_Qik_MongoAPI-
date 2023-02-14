@@ -8,11 +8,11 @@ import ec.microdev.infrastructure.inputport.http.AuthInputPort;
 import io.quarkus.vertx.web.Body;
 import io.quarkus.vertx.web.ReactiveRoutes;
 import io.quarkus.vertx.web.Route;
+import io.quarkus.vertx.web.RouteBase;
 
 import javax.inject.Inject;
-import javax.ws.rs.Path;
 
-@Path("/auth")
+@RouteBase(path="qikAPI/auth")
 public class AuthAPI {
 
 
